@@ -3,4 +3,6 @@ from django.conf import settings
 from . import views
 urlpatterns = [ 
     path(r'', views.main, name="main"),
+    path(r'order', views.show_form, name="show_form"),
+    path(r'submit', views.submit, name="submit"),
 ]

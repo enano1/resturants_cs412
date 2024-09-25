@@ -1,0 +1,13 @@
+{% extends 'resturant/base.html' %}
+{% block content %}
+<div>
+<h1>Confirmation</h1>
+    <p>Hi, {{name}}!</p>
+    <p style="color:{{favorite_color}}">You said your favorite color is {{favorite_color}}.</p>
+</div>
+<div>
+    <p>The current time is {{current_time.tm_hour}}:{{current_time.tm_min}}.</p>
+    <p>Your order will be ready in {{minutes_until_pickup}} minutes at {{pickup_time.tm_hour}}:{{pickup_time.tm_min}}.</p>
+    
+</div>
+{% endblock %}
