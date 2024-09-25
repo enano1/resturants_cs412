@@ -22,13 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('quotes/', include('quotes.urls')), ## we create it with URLS in another file
-        
-    path('hw/', include('hw.urls')), ## we create it with URLS in another file
-                                    ## and associate it with URLs in another file
-
-    path('formdata/', include('formdata.urls')),
-    
+    path('', include('resturant.urls'))    
 ] 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #+ operator concatenates a list
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)                                                        # the static is a list, so we are concating a list with a list
