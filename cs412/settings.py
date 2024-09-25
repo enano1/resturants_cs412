@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-c7^jr7tqdc=)rdehgxkw1w&d_#3l4%_7#ip52)d5@dwy2x2@=s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'your-app-name.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', 'https://resturants-cs412.vercel.app/', 'localhost', '127.0.0.1']
 
 
 # Application definition
