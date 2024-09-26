@@ -1,33 +1,63 @@
 {% extends 'resturant/base.html' %}
 {% block content %}
-<div>
-<h1>Contact Form</h1>
-<form action="{% url 'submit' %}" method="POST">
-    {% csrf_token %}
-    Name: <input type="text" name="name">
-    Favorite color: <input type="text" name="favorite_color">
-    <input type="submit">
-</form>
-</div>
-<div>
-    <table>
-        <tr>
-            <th>Menu</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Fried Wontons</td>
-            <td>$6.99</td>
-        </tr>
-        <tr>
-            <td>Vegetable Soups</td>
-            <td>$7.99</td>
-        </tr>
-        <tr>
-            <td>Chicken Fried Rice</td>
-            <td>$8.99</td>
-        </tr>
-    </table>
-</div>
+    <div class="divHeader">
+        <h1>Place an Order</h1>
+    </div>
+    <div class="divNav">
+        <a href='/'>Main Page</a> <a href="/order">Order Now!</a>
+    </div>
 
+    <!-- Order Form -->
+    <form action="{% url 'submit' %}" method="POST">
+        {% csrf_token %}
+
+        <div class="divCenter">
+            <h2>Select your Items:</h2>
+            
+            <label>
+                <input type="checkbox" name="items" value="Fried Wontons">
+                Fried Wontons $6.99
+            </label><br>
+            <label>
+                <input type="checkbox" name="items" value="Vegetable Soups">
+                Vegetable Soups $7.99
+            </label><br>
+            <label>
+                <input type="checkbox" name="items" value="Chicken Fried Rice">
+                Chicken Fried Rice $8.99
+            </label><br>
+            <label>
+                <input type="checkbox" name="items" value="Beef Lo Mein">
+                Beef Lo Mein $9.99
+            </label><br>
+        </div>
+
+        <div class="divCenter">
+            <h2>Today's Special:</h2>
+            <label>
+                <input type="checkbox" name="special" value="{{special}}">
+                {{special}} $10.99
+            </label><br>
+        </div>
+        <div class="divCenter">
+            <h2>Special Requests</h2>
+            <label for="instructions">Please share any allergies or special requests:</label><br>
+            <textarea id="instructions" name="special_instructions" rows="4" cols="50"></textarea><br>
+        </div>
+        <div class="divCenter">
+            <h2>Customer Information</h2>
+            <label for="name">Name:</label> <input type="text" id="name" name="name" required><br>
+            
+            <label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" required><br>
+            
+            <label for="email">Email:</label> <input type="email" id="email" name="email" required><br>
+            <br>
+        </div>
+        <div class="divCenter">
+            <button type="submit">Place your order!</button>
+        </div>
+    </form>
+    <div class="divBottom">
+        This page was generated at: {{current_time}}
+    </div>  
 {% endblock %}

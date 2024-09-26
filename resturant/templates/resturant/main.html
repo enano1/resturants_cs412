@@ -1,22 +1,21 @@
 {% extends 'resturant/base.html' %}
 {% block content %}
-    <div>
+    <div class="divHeader">
         <h1>Welcome to La Dinastia!</h1>    
     </div>
-    <div>
-        <a href="/order">Order Now!</a>
+    <div class="divNav">
+        <a href='/'>Main Page</a> <a href="/order">Order Now!</a>
     </div>
-    <div>
+    
+    <div class="divImage">
         <img src='/resturant/images/ladinastia.jpeg' alt='La Dinastia'>
     </div>
     <div>
+        <p ><b>Hours of Operation:</b> <br>
+        Monday - Thursday: 12pm - 10:30pm <br>
+        Friday - Saturday: 12pm - 11pm <br>
+        Sunday: 12pm - 10:30pm</p>
         <table>
-            <tr>
-                <th>Information</th>
-            </tr>
-            <tr>
-                <td>Open Every Day : 11:30am-10pm</td>
-            </tr>
             <tr>
                 <td>Address:</td>
                 <td>145 W. 72nd Street<br>
@@ -33,4 +32,9 @@
             </tr>
         </table>
     </div>
+    <div class="divBottom">
+        This page was generated at: {{current_time}}
+    </div>
+
+
 {% endblock %}
