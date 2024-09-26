@@ -1,14 +1,36 @@
 {% extends 'resturant/base.html' %}
 {% block content %}
-<html>
     <div>
         <h1>Welcome to La Dinastia!</h1>    
-    <div/>
+    </div>
     <div>
         <a href="/order">Order Now!</a>
     </div>
     <div>
         <img src='/resturant/images/ladinastia.jpeg' alt='La Dinastia'>
     </div>
-<html/>
+    <div>
+        <table>
+            <tr>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td>Open Every Day : 11:30am-10pm</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>145 W. 72nd Street<br>
+                    New York, New York 10023</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>212.362.3801<br>
+                    212.362.4405</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><a href="mailto:hello@ladinastia72.com">hello@ladinastia72.com</a></td>
+            </tr>
+        </table>
+    </div>
 {% endblock %}
