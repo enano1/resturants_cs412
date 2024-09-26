@@ -1,8 +1,10 @@
 <!-- formdata/templates/formdata/base.html -->
+{% load static %}
+
 <html>
     <head>
         <title>La Dinastia</title>
-        <link rel="stylesheet" href="resturant/resturantstyles.css">
+        <link rel="stylesheet" href="{% static 'resturant/resturantstyles.css' %}">
     </head>
     <body>
     {% block content %}
