@@ -9,7 +9,7 @@ def main(request):
     Handles the request to go to the main.html page
     '''
 
-    template_name = "resturant/main.html"
+    template_name = "restaurant/main.html"
     context = {
         'current_time': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
     }
@@ -19,7 +19,7 @@ def show_form(request):
     '''
     Handles the request to go to the order.html page
     '''
-    template_name = "resturant/order.html"
+    template_name = "restaurant/order.html"
 
     specials = ['Soggy Wontons', 'Skeleton Soup', 'Chicken Fried Feet', 'Just a bowl']
     context = {
@@ -81,7 +81,7 @@ def submit(request):
             'minutes_until_pickup': minutes_until_pickup,
         }
 
-        template_name = "resturant/confirmation.html"
+        template_name = "restaurant/confirmation.html"
         return render(request, template_name, context=context)
 
     return redirect("show_form")    
